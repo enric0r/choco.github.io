@@ -1,0 +1,17 @@
+colorScheme = "princess"
+
+[homepage]
+    layout = "card"
+    showRecent = false
+    homepageImage = "render.jpeg"
+    
+
+[list]
+    groupByYear = false
+
+[article]
+    showDate = false
+    showDateUpdated = false
+    showAuthor = false
+    showWordCount = false
+    showPagination = false

@@ -1,0 +1,14 @@
+baseURL = 'https://choco.github.io/'
+
+languageCode = 'en'
+
+title = '🎹 ChoCo 🍫'
+
+enableEmoji = true
+
+[caches]
+    [caches.images]
+        dir = ':cacheDir/images'
+
+[markup.goldmark.renderer]
+  unsafe = true
