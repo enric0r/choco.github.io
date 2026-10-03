@@ -9,8 +9,8 @@
   <title>{{ if .IsHome }}{{ i18n "siteTitle" }}{{ else }}{{ .Title }} · ChoCo{{ end }}</title>
   {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}
   <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
-  <script src="{{ "js/site.js" | relURL }}" defer></script>
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v={{ md5 (readFile "static/css/site.css") }}">
+  <script src="{{ "js/site.js" | relURL }}?v={{ md5 (readFile "static/js/site.js") }}" defer></script>
 </head>
 <body class="{{ if .IsHome }}is-home{{ else if eq .Section "docs" }}is-docs{{ else }}is-about{{ end }}">
   <a class="skip-link" href="#main">{{ i18n "skip" }}</a>
