@@ -1,14 +1,7 @@
 baseURL = 'https://enric0r.github.io/choco.github.io/'
-
 languageCode = 'en'
-
-title = '🎹 ChoCo 🍫'
-
-enableEmoji = true
-
-[caches]
-    [caches.images]
-        dir = ':cacheDir/images'
+title = 'ChoCo — USB MIDI chord controller'
+disableKinds = ['taxonomy', 'term', 'RSS']
 
 [markup.goldmark.renderer]
-  unsafe = true
+  unsafe = false

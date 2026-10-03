@@ -1,3 +1,0 @@
----
-title: "Making of... ChoCo"
----

@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="page-heading"><div class="shell"><span class="eyebrow">THE PROJECT</span><h1>About ChoCo</h1><p>Who made it, what it is, and where to find the files.</p></div></div>
+<div class="shell about-layout">
+  <article class="about-article prose">{{ .Content }}</article>
+  <figure class="about-image"><img src="{{ "images/choco-board.jpeg" | relURL }}" alt="ChoCo board render" width="1480" height="878"><figcaption>ChoCo board render</figcaption></figure>
+</div>
+{{ end }}
