@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 64" width="512" height="256" role="img" aria-labelledby="title desc">
+  <title id="title">ChoCo OLED while editing</title><desc id="desc">Top bar C ION and EDIT; C Maj chord in center; LAT mode; Deg 1 Inv: 1 confirmation.</desc>
+  <rect width="128" height="64" fill="#050505"/>
+  <g fill="#f5f5f1" font-family="monospace" font-weight="700" text-rendering="geometricPrecision">
+    <text x="3" y="8" font-size="7">C ION</text><text x="80" y="8" font-size="7">EDIT</text>
+    <text x="64" y="32" font-size="14" text-anchor="middle">C Maj</text>
+    <text x="64" y="47" font-size="7" text-anchor="middle">LAT</text>
+    <text x="3" y="63" font-size="7">Deg 1 Inv: 1</text>
+  </g>
+  <path d="M3 52.5H125" stroke="#f5f5f1" stroke-width="1" shape-rendering="crispEdges"/>
+</svg>

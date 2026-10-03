@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 64" width="512" height="256" role="img" aria-labelledby="title desc">
+  <title id="title">ChoCo OLED ready state</title><desc id="desc">Top bar C ION; READY in the center; NEXT suggestions in the footer.</desc>
+  <rect width="128" height="64" fill="#050505"/>
+  <g fill="#f5f5f1" font-family="monospace" font-weight="700" text-rendering="geometricPrecision">
+    <text x="3" y="8" font-size="7">C ION</text>
+    <text x="64" y="32" font-size="14" text-anchor="middle">READY</text>
+    <text x="3" y="63" font-size="7">NEXT</text>
+    <text x="43" y="63" font-size="7">1</text><text x="65" y="63" font-size="7">5</text><text x="87" y="63" font-size="7">4</text><text x="109" y="63" font-size="7">6</text>
+  </g>
+  <path d="M3 52.5H125" stroke="#f5f5f1" stroke-width="1" shape-rendering="crispEdges"/>
+</svg>

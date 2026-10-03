@@ -17,22 +17,9 @@ The initial root is C4 and the initial scale is Ionian (major). The USB device n
 
 ## Controls
 
-The three-row keypad is arranged like this:
+The three-row keypad and joystick are shown below. The diagram uses the firmware labels; the unused keypad positions are left blank.
 
-```text
-A  B  C  _
-1  3  5  _
-0  2  4  6
-```
-
-| Input | Action |
-| --- | --- |
-| `0`–`6` | Play scale degrees 1–7; the OLED shows them as `D1`–`D7` |
-| `A` | Raise the root note by one semitone |
-| `B` | Cycle to the next scale |
-| Hold `C`, press `0`–`6` | Cycle the stored inversion for that degree |
-| Hold `C`, press and release `A` | Toggle chord latch |
-| Hold `C`, press `B` | Print chord history when INFO serial logging is enabled |
+{{< controller-map >}}
 
 The scale choices are Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian, harmonic minor, and melodic minor.
 
@@ -78,6 +65,14 @@ These labels follow `getChordVariationForDirection()` in the firmware. Returning
 - **Single note (`NOTE`)** plays only the selected degree note.
 
 The OLED shows the selected key and scale, the active degree or `EDIT`, the chord name, mode badges, and `NEXT` harmonic suggestions. `NEXT` is a set of suggestions, not a prediction. Status messages briefly replace the footer. Display refresh is limited to about 100 ms, and a sounding chord keeps the screen awake.
+
+### Screen layout
+
+These are illustrative redraws of the firmware’s 128×64 monochrome layout, rather than photographs of a running board. Chord names, mode badges, and suggested degrees change with input.
+
+{{< screen-gallery >}}
+
+The top line shows key and scale, then `D1`–`D7` for the sounding degree or `EDIT` while `C` is held. The center shows the current chord name. Active mode abbreviations sit below it. A temporary status message replaces only the `NEXT` line.
 
 Each key and the joystick button use 10 ms stable-edge debouncing. A newly pressed degree replaces the sounding one. Releasing it stops playback unless latch is enabled; an older held degree does not replay automatically. Exactly simultaneous degree presses select the lowest degree. Some multi-key combinations can produce matrix ghosting on hardware without per-key diodes.
 
