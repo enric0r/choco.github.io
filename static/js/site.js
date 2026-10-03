@@ -1,4 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
+const initSite = () => {
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    const updateThemeButton = () => {
+      themeToggle.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'dark'));
+    };
+    updateThemeButton();
+    themeToggle.addEventListener('click', () => {
+      const dark = document.documentElement.dataset.theme !== 'dark';
+      if (dark) document.documentElement.dataset.theme = 'dark';
+      else delete document.documentElement.dataset.theme;
+      try { localStorage.setItem('choco-theme', dark ? 'dark' : 'light'); } catch (e) {}
+      updateThemeButton();
+    });
+  }
+
   const toggle = document.querySelector('.toc-toggle');
   const toc = document.querySelector('.docs-toc');
   if (!toggle || !toc) return;
@@ -34,4 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(() => { queued = false; updateActive(); });
   }, { passive: true });
   updateActive();
-});
+};
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSite, { once: true });
+else initSite();

@@ -6,6 +6,8 @@ other = "Skip to content"
 other = "ChoCo home"
 [mainNav]
 other = "Main navigation"
+[darkTheme]
+other = "Dark theme"
 [navDocs]
 other = "Documentation"
 [navAbout]
@@ -28,6 +30,14 @@ other = "View the source ↗"
 other = "Render of the ChoCo board showing its OLED, Raspberry Pi Pico, joystick and keypad"
 [boardCaption]
 other = "ChoCo board render"
+[heroAlt]
+other = "Photo of the assembled ChoCo prototype with OLED, Raspberry Pi Pico, joystick and ten keys"
+[heroCaption]
+other = "Assembled ChoCo prototype"
+[backAlt]
+other = "Photo of the cocoa-brown ChoCo prototype back with eight recessed chocolate-bar squares"
+[backCaption]
+other = "Chocolate-bar back of the prototype"
 [factsLabel]
 other = "Project at a glance"
 [degreeKeys]
@@ -63,7 +73,7 @@ other = "USE & BUILD"
 [projectHeading]
 other = "Documentation and files"
 [projectBody]
-other = "The handbook is a single page with a side index. It covers first use, controls, board connections, firmware, configuration and troubleshooting."
+other = "The handbook is a single page with a side index. It covers first use, controls, board connections, firmware, configuration and troubleshooting. The prototype’s printed back is shaped like a chocolate bar."
 [openHandbook]
 other = "Open the handbook"
 [hardwareFiles]

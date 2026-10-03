@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#25140f">
+  <script>try{if(localStorage.getItem('choco-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
   <meta name="description" content="{{ .Params.description | default .Site.Title }}">
   <title>{{ if .IsHome }}{{ i18n "siteTitle" }}{{ else }}{{ .Title }} · ChoCo{{ end }}</title>
   {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}
@@ -24,9 +25,12 @@
         <a href="{{ (.Site.GetPage "/about").RelPermalink }}" {{ if eq .RelPermalink (.Site.GetPage "/about").RelPermalink }}aria-current="page"{{ end }}>{{ i18n "navAbout" }}</a>
         <a class="nav-github" href="https://github.com/enric0r/ChoCo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
-      <nav class="language-switch" aria-label="Language / Lingua">
-        {{ range .AllTranslations }}<a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" {{ if eq $.Language.Lang .Language.Lang }}aria-current="page"{{ end }}>{{ upper .Language.Lang }}</a>{{ end }}
-      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="{{ i18n "darkTheme" }}" aria-pressed="false" title="{{ i18n "darkTheme" }}"><span class="theme-icon" aria-hidden="true"></span></button>
+        <nav class="language-switch" aria-label="Language / Lingua">
+          {{ range .AllTranslations }}<a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" {{ if eq $.Language.Lang .Language.Lang }}aria-current="page"{{ end }}>{{ upper .Language.Lang }}</a>{{ end }}
+        </nav>
+      </div>
     </div>
   </header>
 

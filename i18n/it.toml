@@ -6,6 +6,8 @@ other = "Vai al contenuto"
 other = "Pagina iniziale di ChoCo"
 [mainNav]
 other = "Navigazione principale"
+[darkTheme]
+other = "Tema scuro"
 [navDocs]
 other = "Documentazione"
 [navAbout]
@@ -28,6 +30,14 @@ other = "Vedi il codice ↗"
 other = "Rendering della scheda ChoCo con display OLED, Raspberry Pi Pico, joystick e tastiera"
 [boardCaption]
 other = "Rendering della scheda ChoCo"
+[heroAlt]
+other = "Foto del prototipo ChoCo assemblato con OLED, Raspberry Pi Pico, joystick e dieci tasti"
+[heroCaption]
+other = "Prototipo ChoCo assemblato"
+[backAlt]
+other = "Foto del retro marrone del prototipo ChoCo con otto quadretti incavati a forma di tavoletta di cioccolato"
+[backCaption]
+other = "Il retro a tavoletta del prototipo"
 [factsLabel]
 other = "ChoCo in breve"
 [degreeKeys]
@@ -63,7 +73,7 @@ other = "USO E REALIZZAZIONE"
 [projectHeading]
 other = "Documentazione e file"
 [projectBody]
-other = "La guida è una pagina unica con indice laterale. Spiega il primo avvio, i comandi, i collegamenti, il firmware, la configurazione e la risoluzione dei problemi."
+other = "La guida è una pagina unica con indice laterale. Spiega il primo avvio, i comandi, i collegamenti, il firmware, la configurazione e la risoluzione dei problemi. Il retro stampato del prototipo richiama una tavoletta di cioccolato."
 [openHandbook]
 other = "Apri la guida"
 [hardwareFiles]
