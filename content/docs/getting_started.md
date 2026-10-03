@@ -1,113 +1,41 @@
 ---
-title: "Getting Started 🚀"
+title: "Get started"
+description: "Connect ChoCo and play a first chord"
+weight: 10
 ---
 
-Getting started with **ChoCo** is simple.  
-ChoCo is an open-hardware USB-MIDI controller, designed to be built using standard PCB manufacturing and easy-to-source components.
+## What you need
 
-This guide walks you through the basic steps needed to go from files to a working device.
+- An assembled ChoCo board with an RP2040, keypad, joystick, and OLED
+- A USB data cable
+- A computer with a MIDI monitor, instrument, or DAW
+- A ChoCo firmware UF2 file, or PlatformIO to build one
 
----
+The [hardware page]({{< relref "docs/building" >}}) lists the firmware pin map and links to the KiCad files. Check those against your board revision before applying power.
 
-## 1. Download the PCB files
+## Install the firmware
 
-Start by downloading the **Gerber files**, which are ready for PCB manufacturing.
+If a release provides `ChoCo-firmware.uf2`, download it from [ChoCo Releases](https://github.com/enric0r/ChoCo/releases). Otherwise, [build the UF2 with PlatformIO]({{< relref "docs/flashing_debugging" >}}).
 
-<div class="flex gap-4 flex-wrap mt-4 mb-6">
+1. Disconnect the board.
+2. Hold **BOOTSEL** while connecting it to the computer.
+3. Copy the UF2 file to the **RPI-RP2** drive.
+4. Wait for the board to restart, then connect it to your MIDI host.
 
-{{< button href="https://github.com/enric0r/ChoCo/releases" target="_blank" >}}
-⬇️ Download Gerber files
-{{< /button >}}
-</div>
+## Play your first chord
 
----
+1. Select ChoCo's USB MIDI input in your MIDI monitor or DAW. The device name may use the USB core's default descriptor unless custom descriptors were enabled in the firmware.
+2. Press and hold keypad **0**. It selects the first scale degree. Keys **0–6** correspond to degrees **1–7** on the OLED.
+3. Move the joystick while holding a degree to hear a chord variation. Bring it back to center for the base triad.
+4. Press **A** to raise the root by a semitone; press **B** to cycle scales.
 
-## 2. Order the PCB
+The default scale is Ionian (major) and the base MIDI note is C4. The complete shortcuts and modes are in [Controls]({{< relref "docs/controls" >}}).
 
-Upload the downloaded `.gerber` files to your PCB manufacturer of choice and use the default settings unless you know what you’re doing.
+## If something does not work
 
-{{< alert icon="circle-info" cardColor="#6D9DC5" iconColor="#FFFFFF" textColor="#FFFFFF">}}
-Choose the **PCB manufacturer** of your liking.  
-{{< /alert >}}
+- **No USB MIDI device:** use a data cable, reconnect after flashing, and check that the MIDI host has selected the correct input.
+- **No sound:** ChoCo sends MIDI notes; it needs a MIDI instrument or software synth to make sound.
+- **No OLED image:** check the display's power, I²C address, SDA/SCL pins, and selected I²C port.
+- **Unexpected input:** verify the keypad and joystick wiring against the [pin map]({{< relref "docs/building" >}}).
 
-Recommended options:
-- **Base Material:** FR-4
-- **Layers:** 2
-- **Board thickness:** 1.6 mm  
-- **Copper weight:** 1 oz  
-- **Surface finish:** HASL
-- **Silkscreen** & **PCB Color:** Whatever you like the most  
-
----
-
-## 3. Source the components
-
-Once the PCB is ordered, you’ll need to source the electronic components.
-
-{{< alert icon="circle-info" cardColor="#6D9DC5" iconColor="#FFFFFF" textColor="#FFFFFF">}}
-**Note**: All the links below ARE NOT affiliated/referral, are just to show an example of the components needed.
-{{< /alert >}}
-
-At a minimum, ChoCo requires:
-- [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
-- [10x Key Switches 5 pins](https://amzn.eu/d/gIBJ4OQ)
-- [PS4 Joystick](https://amzn.eu/d/7egcikS)
-- [OLED display](https://amzn.eu/d/bgN2Kaj)
-- [Switching Diodes](https://amzn.eu/d/1peefNB) (1N4148 will work)
-- Micro-USB Cable
-
-👉 A **BOM (Bill of Materials)** is available in the repository with exact part numbers and links.
-
----
-
-## 4. Assemble the board
-
-Solder the components onto the PCB, starting with:
-1. Diodes -- Mind the orientation of the diodes
-2. OLED Screen
-3. Raspberry Pi Pico -- Make sure to solder header pins to the Raspberry before soldering it to the ChoCo PCB
-4. Switches -- Take your time during this step to ensure each switch is correctly in place, especially if you are using 3 pin switches as you might end up having crooked switches.
-5. Joystick
-
-Take your time and double-check component orientation before soldering.
-
----
-
-## 5. Flash the firmware
-
-Once assembled, connect the Raspberry Pi Pico to your computer via USB and flash the ChoCo firmware.
-
-
-
-### Installation 
-1. [Download `ChoCo-firmware.uf2`](https://github.com/enric0r/ChoCo/releases/latest)
-2. Connect your Raspberry Pi Pico while holding BOOTSEL button
-3. A new mass-storage device should appear -> Copy the .uf2 file to the RPI-RP2 drive
-4. The device will automatically reboot with the new firmware
-
-Detailed flashing instructions are available in the **Documentation** section.
-
----
-
-## 6. Connect and play
-
-After flashing:
-- Plug ChoCo into your computer
-- Open your DAW or MIDI monitor
-- Select **ChoCo** as a MIDI input
-- Start triggering chords 🎵
-
-ChoCo will automatically stay in key and scale, letting you focus on harmony and musical ideas.
-
----
-
-## What’s next?
-
-- Learn how chord shaping works
-- Customize scales and keys
-- Modify or extend the firmware
-- Design your own enclosure
-
-Head over to the **Documentation** section to dive deeper.
-
-Happy building! 🚀🎶
+See [Firmware and troubleshooting]({{< relref "docs/flashing_debugging" >}}) for diagnostic logging and physical checks.

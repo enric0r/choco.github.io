@@ -20,7 +20,7 @@ jobs:
     env:
       DART_SASS_VERSION: 1.97.1
       GO_VERSION: 1.25.5
-      HUGO_VERSION: 0.154.2
+      HUGO_VERSION: 0.154.1
       NODE_VERSION: 24.12.0
       TZ: Europe/Rome
     steps:
@@ -82,6 +82,7 @@ jobs:
           hugo \
             --gc \
             --minify \
+            --destination site \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
       - name: Cache save
@@ -93,7 +94,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./site
   deploy:
     environment:
       name: github-pages

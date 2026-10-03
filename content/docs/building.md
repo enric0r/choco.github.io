@@ -1,98 +1,33 @@
 ---
-title: "Building ChoCo 🛠️"
+title: "Hardware"
+description: "Board files and firmware pin map"
+weight: 30
 ---
 
-This page covers the **hardware build** of ChoCo, from PCB to a fully assembled controller.
+The [ChoCo repository](https://github.com/enric0r/ChoCo/tree/main/hardware) contains the KiCad schematic (`ChoCo.kicad_sch`), PCB (`ChoCo.kicad_pcb`), project file, and a `ChoCo_REV-02.zip` board archive. Check the archive contents and board revision before ordering a PCB. The repository does not currently contain a verified component BOM; use the schematic and PCB as the source for footprints and values.
 
-ChoCo is designed to be easy to build using standard components and simple soldering tools.
+## Firmware pin map
 
----
+The defaults below come from [`lib/Config/Config.h`](https://github.com/enric0r/ChoCo/blob/main/lib/Config/Config.h). Update that file if your wiring differs.
 
-## What you need
+| Function | RP2040 pin | Notes |
+| --- | --- | --- |
+| Keypad rows | GP2, GP1, GP0 | Three rows |
+| Keypad columns | GP3, GP4, GP5, GP6 | Four columns, input pull-ups |
+| Joystick X / Y | A0 / A1 | Analog inputs; software swaps and inverts axes for the current PCB revision |
+| Joystick button | GP13 | Active low with input pull-up by default |
+| OLED SDA / SCL | GP14 / GP15 | I²C1 (`Wire1`), address `0x3C` |
 
-### Required tools
-- Soldering iron (fine tip recommended)
-- Solder (lead-free or leaded)
-- Multimeter (optional, but useful)
+The OLED expects an SSD1306-compatible 128×64 I²C display. Verify voltage compatibility and pin order for the specific module you use. Firmware settings do not replace checking the schematic and physical wiring.
 
-### Main components
-- **RP2040 board** (Raspberry Pi Pico or compatible)
-- **3×4 keypad matrix** (7 keys used)
-- **Analog joystick module**
-- **OLED display** (SSD1306, 128×64, I2C)
-- Passive components (resistors, capacitors)
-- Headers / connectors as specified in the BOM
+## Keypad layout
 
-A full **Bill of Materials (BOM)** with exact part numbers is available in the repository.
+```text
+A  B  C  _
+1  3  5  _
+0  2  4  6
+```
 
----
+Keys **0–6** select scale degrees. **A** and **B** change the root and scale; **C** is a modifier. The three `_` positions are unused in the firmware layout.
 
-## PCB manufacturing
-
-1. Download the `.gerber` files from the Releases page
-2. Upload them to your PCB manufacturer of choice
-3. Use default settings unless you know what you’re changing
-
-**Recommended PCB options**
-- Thickness: **1.6 mm**
-- Copper weight: **1 oz**
-- Surface finish: HASL or ENIG
-- Layers: 2
-
-{{< alert icon="circle-info">}}
-ChoCo was tested using JLCPCB, but any standard PCB manufacturer will work.
-{{< /alert >}}
-
----
-
-## Soldering order (recommended)
-
-To make assembly easier, solder components in this order:
-
-1. **Small SMD components** (resistors, capacitors)
-2. **ICs and headers**
-3. **OLED display connector**
-4. **Joystick module**
-5. **Key switches / keypad**
-6. **Raspberry Pi Pico** (last)
-
-Take extra care with:
-- OLED orientation
-- Joystick pin alignment
-- Pico pin headers (keep them straight!)
-
----
-
-## Wiring overview
-
-### OLED (I2C1)
-- SDA → **GP14**
-- SCL → **GP15**
-- Voltage → **3.3V only**
-
-{{< alert icon="triangle-exclamation">}}
-Ensure your OLED display is **3.3V compatible** or properly level-shifted.
-{{< /alert >}}
-
----
-
-### Joystick
-- X axis → **A0**
-- Y axis → **A1**
-- Button → **GP7** (active-low by default)
-
----
-
-### Keypad matrix
-
-**Rows (outputs):**
-- GP2
-- GP1
-- GP0
-
-**Columns (inputs, pull-ups enabled):**
-- GP3
-- GP4
-- GP5
-- GP6
-
+For operation after assembly, continue with [Get started]({{< relref "docs/getting_started" >}}) and [Controls]({{< relref "docs/controls" >}}).
