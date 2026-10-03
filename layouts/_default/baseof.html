@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#25140f">
   <meta name="description" content="{{ .Params.description | default .Site.Title }}">
-  <title>{{ if .IsHome }}ChoCo · USB MIDI chord controller{{ else }}{{ .Title }} · ChoCo{{ end }}</title>
+  <title>{{ if .IsHome }}{{ i18n "siteTitle" }}{{ else }}{{ .Title }} · ChoCo{{ end }}</title>
+  {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}
   <link rel="icon" href="{{ "favicon.ico" | relURL }}">
   <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
   <script src="{{ "js/site.js" | relURL }}" defer></script>
 </head>
 <body class="{{ if .IsHome }}is-home{{ else if eq .Section "docs" }}is-docs{{ else }}is-about{{ end }}">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">{{ i18n "skip" }}</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="ChoCo home">
+      <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ i18n "home" }}">
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
         <span>ChoCo<span class="brand-dot">.</span></span>
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="{{ "docs/" | relURL }}" {{ if eq .Section "docs" }}aria-current="page"{{ end }}>Documentation</a>
-        <a href="{{ "about/" | relURL }}" {{ if eq .RelPermalink ("about/" | relURL) }}aria-current="page"{{ end }}>About</a>
+      <nav class="top-nav" aria-label="{{ i18n "mainNav" }}">
+        <a href="{{ (.Site.GetPage "/docs").RelPermalink }}" {{ if eq .Section "docs" }}aria-current="page"{{ end }}>{{ i18n "navDocs" }}</a>
+        <a href="{{ (.Site.GetPage "/about").RelPermalink }}" {{ if eq .RelPermalink (.Site.GetPage "/about").RelPermalink }}aria-current="page"{{ end }}>{{ i18n "navAbout" }}</a>
         <a class="nav-github" href="https://github.com/enric0r/ChoCo" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+      <nav class="language-switch" aria-label="Language / Lingua">
+        {{ range .AllTranslations }}<a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" {{ if eq $.Language.Lang .Language.Lang }}aria-current="page"{{ end }}>{{ upper .Language.Lang }}</a>{{ end }}
       </nav>
     </div>
   </header>
@@ -32,12 +36,12 @@
     <div class="shell footer-inner">
       <div>
         <span class="footer-brand">ChoCo<span>.</span></span>
-        <p>RP2040 USB MIDI chord controller.</p>
+        <p>{{ i18n "footerDescription" }}</p>
       </div>
       <div class="footer-links">
-        <a href="{{ "docs/" | relURL }}">Handbook</a>
-        <a href="{{ "about/" | relURL }}">About</a>
-        <a href="https://github.com/enric0r/ChoCo">Source code ↗</a>
+        <a href="{{ (.Site.GetPage "/docs").RelPermalink }}">{{ i18n "handbook" }}</a>
+        <a href="{{ (.Site.GetPage "/about").RelPermalink }}">{{ i18n "navAbout" }}</a>
+        <a href="https://github.com/enric0r/ChoCo">{{ i18n "sourceCode" }}</a>
       </div>
     </div>
   </footer>

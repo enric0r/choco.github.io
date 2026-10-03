@@ -1,0 +1,196 @@
+[siteTitle]
+other = "ChoCo · controller USB MIDI per accordi"
+[skip]
+other = "Vai al contenuto"
+[home]
+other = "Pagina iniziale di ChoCo"
+[mainNav]
+other = "Navigazione principale"
+[navDocs]
+other = "Documentazione"
+[navAbout]
+other = "Il progetto"
+[footerDescription]
+other = "Controller USB MIDI per accordi basato su RP2040."
+[handbook]
+other = "Guida"
+[sourceCode]
+other = "Codice sorgente ↗"
+[heroLead]
+other = "Un controller USB MIDI basato su RP2040 per suonare accordi in scala."
+[heroBody]
+other = "Scegli un grado con uno dei sette tasti, muovi il joystick per cambiare accordo e invia le note a uno strumento MIDI o a una DAW. Il display OLED mostra l’accordo e le modalità attive."
+[readDocs]
+other = "Leggi la documentazione"
+[viewSource]
+other = "Vedi il codice ↗"
+[boardAlt]
+other = "Rendering della scheda ChoCo con display OLED, Raspberry Pi Pico, joystick e tastiera"
+[boardCaption]
+other = "Rendering della scheda ChoCo"
+[factsLabel]
+other = "ChoCo in breve"
+[degreeKeys]
+other = "tasti per i gradi"
+[scales]
+other = "scale"
+[output]
+other = "in uscita"
+[controllerEyebrow]
+other = "IL CONTROLLER"
+[whatItDoes]
+other = "Cosa fa ChoCo"
+[whatItDoesBody]
+other = "ChoCo usa pochi controlli fisici per creare accordi coerenti con la scala scelta. Il firmware gira su Raspberry Pi Pico e invia note MIDI via USB; il suono viene prodotto dallo strumento collegato."
+[featureScale]
+other = "Suona in una scala"
+[featureScaleBody]
+other = "I tasti 0–6 selezionano i sette gradi. A cambia la tonica e B scorre le nove scale."
+[featureChord]
+other = "Cambia accordo"
+[featureChordBody]
+other = "Muovi il joystick per ottenere sospensioni, settime, estensioni e altre varianti. Tornando al centro ripristini la triade di base."
+[featureModes]
+other = "Scegli come suonare"
+[featureModesBody]
+other = "Le modalità latch, basso, strum, nota singola e smart voicing cambiano il modo in cui vengono suonate le note."
+[featureDisplay]
+other = "Controlla lo stato"
+[featureDisplayBody]
+other = "L’OLED mostra tonica e scala, nome dell’accordo, modalità attive e suggerimenti armonici."
+[projectEyebrow]
+other = "USO E REALIZZAZIONE"
+[projectHeading]
+other = "Documentazione e file"
+[projectBody]
+other = "La guida è una pagina unica con indice laterale. Spiega il primo avvio, i comandi, i collegamenti, il firmware, la configurazione e la risoluzione dei problemi."
+[openHandbook]
+other = "Apri la guida"
+[hardwareFiles]
+other = "File hardware KiCad ↗"
+[pcbAlt]
+other = "Vista del layout PCB di ChoCo in KiCad"
+[pcbCaption]
+other = "Layout PCB del progetto KiCad"
+[docsEyebrow]
+other = "GUIDA CHOCO"
+[docsIntro]
+other = "Primo avvio, comandi, hardware, firmware e problemi comuni in una sola pagina."
+[docsNav]
+other = "Indice della documentazione"
+[onPage]
+other = "In questa pagina"
+[start]
+other = "INIZIA"
+[play]
+other = "SUONA"
+[build]
+other = "REALIZZA"
+[reference]
+other = "RIFERIMENTO"
+[getStarted]
+other = "Per iniziare"
+[controls]
+other = "Comandi"
+[shapeChord]
+other = "Modificare un accordo"
+[modesDisplay]
+other = "Modalità e display"
+[hardware]
+other = "Hardware"
+[firmware]
+other = "Firmware"
+[configuration]
+other = "Configurazione"
+[troubleshooting]
+other = "Risoluzione dei problemi"
+[contributors]
+other = "Per contribuire"
+[docsNote]
+other = "Questa guida segue il codice attuale del firmware ChoCo. Verifica i dettagli hardware rispetto alla revisione della tua scheda."
+[aboutEyebrow]
+other = "IL PROGETTO"
+[aboutHeading]
+other = "Chi c’è dietro ChoCo"
+[aboutIntro]
+other = "Chi lo ha creato, come funziona e dove trovare i file."
+[mapTitle]
+other = "Mappa dei comandi ChoCo"
+[mapFront]
+other = "Vista frontale · sigle usate dal firmware"
+[mapAria]
+other = "Scheda ChoCo: OLED in alto a sinistra, joystick sotto e tre righe di tasti A B C, 1 3 5, 0 2 4 6 a destra"
+[keypadAria]
+other = "Disposizione dei tasti"
+[rootPlus]
+other = "TONICA +1"
+[scale]
+other = "SCALA"
+[modifier]
+other = "MODIFICA"
+[mapDegrees]
+other = "Suonano i gradi 1–7 della scala. L’ultimo grado premuto prende il controllo."
+[mapRoot]
+other = "Alza la tonica di un semitono."
+[mapNextScale]
+other = "Passa alla scala successiva."
+[mapModifier]
+other = "Tienilo premuto per le scorciatoie qui sotto."
+[stickTilt]
+other = "Movimento del joystick"
+[stickTiltBody]
+other = "Varia l’accordo tenuto; al centro torna la triade di base."
+[stickPress]
+other = "Pressione del joystick"
+[stickPressBody]
+other = "Breve: ferma l’accordo. Lunga: attiva o disattiva la nota singola."
+[withC]
+other = "TENENDO PREMUTO C"
+[stickLeftRight]
+other = "C + joystick ← / →"
+[stickDown]
+other = "C + joystick ↓"
+[shortPress]
+other = "C + pressione breve"
+[longPress]
+other = "C + pressione lunga"
+[strumPress]
+other = "C + A + pressione breve"
+[cycleInversion]
+other = "Cambia inversione"
+[toggleLatch]
+other = "Attiva o disattiva latch al rilascio di A"
+[printHistory]
+other = "Stampa la cronologia se il log seriale è attivo"
+[octave]
+other = "Ottava giù / su"
+[variationMap]
+other = "Cambia mappa delle variazioni"
+[toggleBass]
+other = "Attiva o disattiva il basso"
+[toggleVoicing]
+other = "Attiva o disattiva smart voicing"
+[toggleStrum]
+other = "Attiva o disattiva strum invece di latch"
+[mapCaption]
+other = "La disposizione è schematica. OLED e joystick sono a sinistra della tastiera sulla scheda."
+[screensAria]
+other = "Esempi illustrativi delle schermate OLED"
+[idleAlt]
+other = "OLED inattivo: C Ionian in alto, READY al centro e suggerimenti NEXT in basso"
+[idleTitle]
+other = "Pronto"
+[idleCaption]
+other = "Tonica e scala selezionate, nessun accordo in esecuzione."
+[playingAlt]
+other = "OLED durante l’esecuzione: C Ionian, grado D1, accordo C Maj, modalità BAS e STR e suggerimenti NEXT"
+[playingTitle]
+other = "In esecuzione"
+[playingCaption]
+other = "Nome dell’accordo, grado, direzione, modalità e suggerimenti."
+[editAlt]
+other = "OLED in modifica: C Ionian ed EDIT in alto, accordo C Maj, modalità LAT e conferma temporanea dell’inversione in basso"
+[editTitle]
+other = "In modifica"
+[editCaption]
+other = "Il messaggio temporaneo in basso sostituisce NEXT."

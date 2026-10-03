@@ -1,7 +1,17 @@
 baseURL = 'https://enric0r.github.io/choco.github.io/'
-languageCode = 'en'
 title = 'ChoCo — USB MIDI chord controller'
 disableKinds = ['taxonomy', 'term', 'RSS']
+defaultContentLanguage = 'en'
+
+[languages.en]
+  languageCode = 'en'
+  languageName = 'English'
+  weight = 1
+
+[languages.it]
+  languageCode = 'it'
+  languageName = 'Italiano'
+  weight = 2
 
 [markup.goldmark.renderer]
   unsafe = false

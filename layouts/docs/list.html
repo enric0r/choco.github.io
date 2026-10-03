@@ -1,26 +1,26 @@
 {{ define "main" }}
-<div class="page-heading"><div class="shell"><span class="eyebrow">CHOCO HANDBOOK</span><h1>Documentation</h1><p>Setup, controls, hardware, firmware and troubleshooting in one place.</p></div></div>
+<div class="page-heading"><div class="shell"><span class="eyebrow">{{ i18n "docsEyebrow" }}</span><h1>{{ i18n "navDocs" }}</h1><p>{{ i18n "docsIntro" }}</p></div></div>
 <div class="shell docs-layout">
-  <aside class="docs-sidebar" aria-label="Documentation navigation">
-    <button class="toc-toggle" type="button" aria-controls="docs-toc" aria-expanded="false">On this page <span aria-hidden="true">⌄</span></button>
-    <nav id="docs-toc" class="docs-toc" aria-label="On this page">
-      <span class="toc-label">START</span>
-      <a href="#get-started">Get started</a>
-      <span class="toc-label">PLAY</span>
-      <a href="#controls">Controls</a>
-      <a href="#shape-a-chord">Shape a chord</a>
-      <a href="#modes-and-display">Modes & display</a>
-      <span class="toc-label">BUILD</span>
-      <a href="#hardware">Hardware</a>
-      <a href="#firmware">Firmware</a>
-      <span class="toc-label">REFERENCE</span>
-      <a href="#configuration">Configuration</a>
-      <a href="#troubleshooting">Troubleshooting</a>
-      <a href="#for-contributors">For contributors</a>
+  <aside class="docs-sidebar" aria-label="{{ i18n "docsNav" }}">
+    <button class="toc-toggle" type="button" aria-controls="docs-toc" aria-expanded="false">{{ i18n "onPage" }} <span aria-hidden="true">⌄</span></button>
+    <nav id="docs-toc" class="docs-toc" aria-label="{{ i18n "onPage" }}">
+      <span class="toc-label">{{ i18n "start" }}</span>
+      <a href="#get-started">{{ i18n "getStarted" }}</a>
+      <span class="toc-label">{{ i18n "play" }}</span>
+      <a href="#controls">{{ i18n "controls" }}</a>
+      <a href="#shape-a-chord">{{ i18n "shapeChord" }}</a>
+      <a href="#modes-and-display">{{ i18n "modesDisplay" }}</a>
+      <span class="toc-label">{{ i18n "build" }}</span>
+      <a href="#hardware">{{ i18n "hardware" }}</a>
+      <a href="#firmware">{{ i18n "firmware" }}</a>
+      <span class="toc-label">{{ i18n "reference" }}</span>
+      <a href="#configuration">{{ i18n "configuration" }}</a>
+      <a href="#troubleshooting">{{ i18n "troubleshooting" }}</a>
+      <a href="#for-contributors">{{ i18n "contributors" }}</a>
     </nav>
   </aside>
   <article class="docs-article prose">
-    <p class="docs-note">This guide follows the current ChoCo firmware source. Check the hardware details against your board revision.</p>
+    <p class="docs-note">{{ i18n "docsNote" }}</p>
     {{ .Content }}
   </article>
 </div>

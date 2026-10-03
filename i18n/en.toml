@@ -1,0 +1,196 @@
+[siteTitle]
+other = "ChoCo · USB MIDI chord controller"
+[skip]
+other = "Skip to content"
+[home]
+other = "ChoCo home"
+[mainNav]
+other = "Main navigation"
+[navDocs]
+other = "Documentation"
+[navAbout]
+other = "About"
+[footerDescription]
+other = "RP2040 USB MIDI chord controller."
+[handbook]
+other = "Handbook"
+[sourceCode]
+other = "Source code ↗"
+[heroLead]
+other = "An RP2040 USB MIDI controller for playing scale-aware chords."
+[heroBody]
+other = "Choose a scale degree with one of seven keys, move the joystick to change the chord, and send the result to a MIDI instrument or DAW. The OLED shows the active chord and modes."
+[readDocs]
+other = "Read the documentation"
+[viewSource]
+other = "View the source ↗"
+[boardAlt]
+other = "Render of the ChoCo board showing its OLED, Raspberry Pi Pico, joystick and keypad"
+[boardCaption]
+other = "ChoCo board render"
+[factsLabel]
+other = "Project at a glance"
+[degreeKeys]
+other = "degree keys"
+[scales]
+other = "scales"
+[output]
+other = "output"
+[controllerEyebrow]
+other = "THE CONTROLLER"
+[whatItDoes]
+other = "What ChoCo does"
+[whatItDoesBody]
+other = "ChoCo turns a small set of physical controls into scale-aware chords. The firmware runs on a Raspberry Pi Pico and sends standard MIDI notes over USB; a connected instrument makes the sound."
+[featureScale]
+other = "Play in a scale"
+[featureScaleBody]
+other = "Keys 0–6 select the seven degrees. A changes the root note, and B cycles through nine scales."
+[featureChord]
+other = "Change the chord"
+[featureChordBody]
+other = "Move the joystick for suspensions, sevenths, extensions and other variations. Returning to center restores the base triad."
+[featureModes]
+other = "Choose how it plays"
+[featureModesBody]
+other = "Latch, bass, strum, single-note and smart-voicing modes change how notes are played."
+[featureDisplay]
+other = "See the current state"
+[featureDisplayBody]
+other = "The OLED shows the selected key and scale, chord name, active modes and harmonic suggestions."
+[projectEyebrow]
+other = "USE & BUILD"
+[projectHeading]
+other = "Documentation and files"
+[projectBody]
+other = "The handbook is a single page with a side index. It covers first use, controls, board connections, firmware, configuration and troubleshooting."
+[openHandbook]
+other = "Open the handbook"
+[hardwareFiles]
+other = "KiCad hardware files ↗"
+[pcbAlt]
+other = "KiCad view of the ChoCo PCB layout"
+[pcbCaption]
+other = "PCB layout from the KiCad project"
+[docsEyebrow]
+other = "CHOCO HANDBOOK"
+[docsIntro]
+other = "Setup, controls, hardware, firmware and troubleshooting in one place."
+[docsNav]
+other = "Documentation navigation"
+[onPage]
+other = "On this page"
+[start]
+other = "START"
+[play]
+other = "PLAY"
+[build]
+other = "BUILD"
+[reference]
+other = "REFERENCE"
+[getStarted]
+other = "Get started"
+[controls]
+other = "Controls"
+[shapeChord]
+other = "Shape a chord"
+[modesDisplay]
+other = "Modes & display"
+[hardware]
+other = "Hardware"
+[firmware]
+other = "Firmware"
+[configuration]
+other = "Configuration"
+[troubleshooting]
+other = "Troubleshooting"
+[contributors]
+other = "For contributors"
+[docsNote]
+other = "This guide follows the current ChoCo firmware source. Check the hardware details against your board revision."
+[aboutEyebrow]
+other = "THE PROJECT"
+[aboutHeading]
+other = "About ChoCo"
+[aboutIntro]
+other = "Who made it, what it is, and where to find the files."
+[mapTitle]
+other = "ChoCo control map"
+[mapFront]
+other = "Front view · firmware key labels"
+[mapAria]
+other = "ChoCo board: OLED at top left, joystick below, and three keypad rows A B C, 1 3 5, 0 2 4 6 on the right"
+[keypadAria]
+other = "Keypad layout"
+[rootPlus]
+other = "ROOT +1"
+[scale]
+other = "SCALE"
+[modifier]
+other = "MODIFIER"
+[mapDegrees]
+other = "Play scale degrees 1–7. A newly pressed degree takes over."
+[mapRoot]
+other = "Raise the root by one semitone."
+[mapNextScale]
+other = "Select the next scale."
+[mapModifier]
+other = "Hold as a modifier for the shortcuts below."
+[stickTilt]
+other = "Joystick tilt"
+[stickTiltBody]
+other = "Vary a held chord; center restores its base triad."
+[stickPress]
+other = "Joystick press"
+[stickPressBody]
+other = "Short: stop the chord. Long: toggle single-note mode."
+[withC]
+other = "WITH C HELD"
+[stickLeftRight]
+other = "C + stick ← / →"
+[stickDown]
+other = "C + stick ↓"
+[shortPress]
+other = "C + short press"
+[longPress]
+other = "C + long press"
+[strumPress]
+other = "C + A + short press"
+[cycleInversion]
+other = "Cycle inversion"
+[toggleLatch]
+other = "Toggle latch on A release"
+[printHistory]
+other = "Print history if serial logging is on"
+[octave]
+other = "Octave down / up"
+[variationMap]
+other = "Cycle variation map"
+[toggleBass]
+other = "Toggle bass"
+[toggleVoicing]
+other = "Toggle smart voicing"
+[toggleStrum]
+other = "Toggle strum instead of latch"
+[mapCaption]
+other = "Control positions are schematic. The OLED and joystick are to the left of the keypad on the board."
+[screensAria]
+other = "Illustrative OLED screen states"
+[idleAlt]
+other = "Idle OLED: C Ionian at top, READY in the center, NEXT suggestions at bottom"
+[idleTitle]
+other = "Ready"
+[idleCaption]
+other = "Selected key and scale, with no chord sounding."
+[playingAlt]
+other = "Playing OLED: C Ionian, degree D1, C Maj chord, BAS and STR modes, NEXT suggestions"
+[playingTitle]
+other = "Playing"
+[playingCaption]
+other = "Chord name, degree, direction, modes and suggestions."
+[editAlt]
+other = "Edit OLED: C Ionian and EDIT at top, C Maj chord, LAT mode, temporary inversion message in footer"
+[editTitle]
+other = "Editing"
+[editCaption]
+other = "The footer shows a temporary confirmation instead of NEXT."

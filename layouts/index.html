@@ -4,38 +4,38 @@
     <div class="hero-copy">
       <span class="eyebrow">RP2040 · USB MIDI</span>
       <h1>ChoCo</h1>
-      <p class="hero-lead">An RP2040 USB MIDI controller for playing scale-aware chords.</p>
-      <p>Choose a scale degree with one of seven keys, move the joystick to change the chord, and send the result to a MIDI instrument or DAW. The OLED shows the active chord and modes.</p>
+      <p class="hero-lead">{{ i18n "heroLead" }}</p>
+      <p>{{ i18n "heroBody" }}</p>
       <div class="hero-actions">
-        <a class="button button-primary" href="{{ "docs/" | relURL }}">Read the documentation</a>
-        <a class="button button-secondary" href="https://github.com/enric0r/ChoCo">View the source ↗</a>
+        <a class="button button-primary" href="{{ (.Site.GetPage "/docs").RelPermalink }}">{{ i18n "readDocs" }}</a>
+        <a class="button button-secondary" href="https://github.com/enric0r/ChoCo">{{ i18n "viewSource" }}</a>
       </div>
     </div>
     <figure class="hero-image">
-      <img src="{{ "images/choco-board.jpeg" | relURL }}" alt="Render of the ChoCo board showing its OLED, Raspberry Pi Pico, joystick and keypad" width="1480" height="878">
-      <figcaption>ChoCo board render</figcaption>
+      <img src="{{ "images/choco-board.jpeg" | relURL }}" alt="{{ i18n "boardAlt" }}" width="1480" height="878">
+      <figcaption>{{ i18n "boardCaption" }}</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="facts-bar" aria-label="Project at a glance">
-  <div class="shell facts-grid"><span><strong>7</strong> degree keys</span><span><strong>9</strong> scales</span><span><strong>USB MIDI</strong> output</span><span><strong>128×64</strong> OLED</span></div>
+<section class="facts-bar" aria-label="{{ i18n "factsLabel" }}">
+  <div class="shell facts-grid"><span><strong>7</strong> {{ i18n "degreeKeys" }}</span><span><strong>9</strong> {{ i18n "scales" }}</span><span><strong>USB MIDI</strong> {{ i18n "output" }}</span><span><strong>128×64</strong> OLED</span></div>
 </section>
 
 <section class="shell content-section">
-  <div class="section-intro"><span class="eyebrow">THE CONTROLLER</span><h2>What ChoCo does</h2><p>ChoCo turns a small set of physical controls into scale-aware chords. The firmware runs on a Raspberry Pi Pico and sends standard MIDI notes over USB; a connected instrument makes the sound.</p></div>
+  <div class="section-intro"><span class="eyebrow">{{ i18n "controllerEyebrow" }}</span><h2>{{ i18n "whatItDoes" }}</h2><p>{{ i18n "whatItDoesBody" }}</p></div>
   <div class="feature-grid">
-    <article><h3>Play in a scale</h3><p>Keys 0–6 select the seven degrees. A changes the root note, and B cycles through nine scales.</p></article>
-    <article><h3>Change the chord</h3><p>Move the joystick for suspensions, sevenths, extensions and other variations. Returning to center restores the base triad.</p></article>
-    <article><h3>Choose how it plays</h3><p>Latch, bass, strum, single-note and smart-voicing modes change how notes are played.</p></article>
-    <article><h3>See the current state</h3><p>The OLED shows the selected key and scale, chord name, active modes and harmonic suggestions.</p></article>
+    <article><h3>{{ i18n "featureScale" }}</h3><p>{{ i18n "featureScaleBody" }}</p></article>
+    <article><h3>{{ i18n "featureChord" }}</h3><p>{{ i18n "featureChordBody" }}</p></article>
+    <article><h3>{{ i18n "featureModes" }}</h3><p>{{ i18n "featureModesBody" }}</p></article>
+    <article><h3>{{ i18n "featureDisplay" }}</h3><p>{{ i18n "featureDisplayBody" }}</p></article>
   </div>
 </section>
 
 <section class="project-section">
   <div class="shell project-grid">
-    <div><span class="eyebrow">USE & BUILD</span><h2>Documentation and files</h2><p>The handbook is a single page with a side index. It covers first use, controls, board connections, firmware, configuration and troubleshooting.</p><div class="project-links"><a class="button button-primary" href="{{ "docs/" | relURL }}">Open the handbook</a><a class="text-link" href="https://github.com/enric0r/ChoCo/tree/main/hardware">KiCad hardware files ↗</a></div></div>
-    <figure class="project-image"><img src="{{ "images/choco-pcb.jpeg" | relURL }}" alt="KiCad view of the ChoCo PCB layout" loading="lazy" width="1600" height="800"><figcaption>PCB layout from the KiCad project</figcaption></figure>
+    <div><span class="eyebrow">{{ i18n "projectEyebrow" }}</span><h2>{{ i18n "projectHeading" }}</h2><p>{{ i18n "projectBody" }}</p><div class="project-links"><a class="button button-primary" href="{{ (.Site.GetPage "/docs").RelPermalink }}">{{ i18n "openHandbook" }}</a><a class="text-link" href="https://github.com/enric0r/ChoCo/tree/main/hardware">{{ i18n "hardwareFiles" }}</a></div></div>
+    <figure class="project-image"><img src="{{ "images/choco-pcb.jpeg" | relURL }}" alt="{{ i18n "pcbAlt" }}" loading="lazy" width="1600" height="800"><figcaption>{{ i18n "pcbCaption" }}</figcaption></figure>
   </div>
 </section>
 {{ end }}
