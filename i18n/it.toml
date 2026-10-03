@@ -129,7 +129,7 @@ other = "Mappa dei comandi ChoCo"
 [mapFront]
 other = "Fronte del prototipo · sigle del firmware"
 [mapAria]
-other = "Fronte del prototipo ChoCo: OLED e joystick a sinistra; A B C sopra 1 3 5 a destra; la riga inferiore 0 2 4 6 sporge di un tasto a sinistra"
+other = "Fronte del prototipo ChoCo: OLED e joystick a sinistra; A B C sopra 1 3 5, centrati tra i tasti bianchi 0 2 4 6"
 [keypadAria]
 other = "Disposizione dei tasti"
 [rootPlus]
@@ -183,7 +183,7 @@ other = "Attiva o disattiva smart voicing"
 [toggleStrum]
 other = "Attiva o disattiva strum invece di latch"
 [mapCaption]
-other = "Vista schematica del prototipo. La riga inferiore da quattro tasti sporge a sinistra delle due righe da tre."
+other = "Vista schematica del prototipo. Le due righe superiori sono centrate sugli spazi tra i quattro tasti bianchi."
 [screensAria]
 other = "Esempi illustrativi delle schermate OLED"
 [idleAlt]

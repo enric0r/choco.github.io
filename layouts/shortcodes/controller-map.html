@@ -7,13 +7,17 @@
         <div class="diagram-joystick"><span class="joystick-knob" aria-hidden="true"></span><span>JOYSTICK</span></div>
       </div>
       <div class="diagram-keypad" aria-label="{{ i18n "keypadAria" }}">
-        <div class="diagram-spacer"></div>
-        <div class="diagram-key diagram-key-mod"><strong>A</strong><small>{{ i18n "rootPlus" }}</small></div>
-        <div class="diagram-key diagram-key-mod"><strong>B</strong><small>{{ i18n "scale" }}</small></div>
-        <div class="diagram-key diagram-key-mod"><strong>C</strong><small>{{ i18n "modifier" }}</small></div>
-        <div class="diagram-spacer"></div>
-        <div class="diagram-key diagram-key-mid">1</div><div class="diagram-key diagram-key-mid">3</div><div class="diagram-key diagram-key-mid">5</div>
-        <div class="diagram-key">0</div><div class="diagram-key">2</div><div class="diagram-key">4</div><div class="diagram-key">6</div>
+        <div class="diagram-key-row diagram-key-row-offset">
+          <div class="diagram-key diagram-key-mod"><strong>A</strong><small>{{ i18n "rootPlus" }}</small></div>
+          <div class="diagram-key diagram-key-mod"><strong>B</strong><small>{{ i18n "scale" }}</small></div>
+          <div class="diagram-key diagram-key-mod"><strong>C</strong><small>{{ i18n "modifier" }}</small></div>
+        </div>
+        <div class="diagram-key-row diagram-key-row-offset">
+          <div class="diagram-key diagram-key-mid">1</div><div class="diagram-key diagram-key-mid">3</div><div class="diagram-key diagram-key-mid">5</div>
+        </div>
+        <div class="diagram-key-row">
+          <div class="diagram-key">0</div><div class="diagram-key">2</div><div class="diagram-key">4</div><div class="diagram-key">6</div>
+        </div>
       </div>
     </div>
     <div class="controller-map-legend">

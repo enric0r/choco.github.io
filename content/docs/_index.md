@@ -17,7 +17,7 @@ The initial root is C4 and the initial scale is Ionian (major). The USB device n
 
 ## Controls
 
-The three-row keypad and joystick are shown below. The diagram uses the firmware labels; the unused keypad positions are left blank.
+The three-row keypad and joystick are shown below in their physical positions. The labels follow the firmware.
 
 {{< controller-map >}}
 

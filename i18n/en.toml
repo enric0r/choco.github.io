@@ -129,7 +129,7 @@ other = "ChoCo control map"
 [mapFront]
 other = "Prototype front · firmware key labels"
 [mapAria]
-other = "ChoCo prototype front: OLED and joystick on the left; A B C above 1 3 5 on the right; bottom row 0 2 4 6 extends one key to the left"
+other = "ChoCo prototype front: OLED and joystick on the left; A B C above 1 3 5, centered between the white 0 2 4 6 keys"
 [keypadAria]
 other = "Keypad layout"
 [rootPlus]
@@ -183,7 +183,7 @@ other = "Toggle smart voicing"
 [toggleStrum]
 other = "Toggle strum instead of latch"
 [mapCaption]
-other = "Schematic front view of the prototype. The four-key bottom row extends left of the two three-key rows."
+other = "Schematic front view of the prototype. The upper two rows are centered over the gaps between the four white keys."
 [screensAria]
 other = "Illustrative OLED screen states"
 [idleAlt]

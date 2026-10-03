@@ -17,7 +17,7 @@ All’avvio la tonica è C4 e la scala è Ionian (maggiore). Il nome del disposi
 
 ## Comandi {#controls}
 
-Qui sotto trovi le tre righe di tasti e il joystick. Le posizioni non utilizzate sono lasciate vuote; le lettere sono quelle usate dal firmware.
+Qui sotto trovi le tre righe di tasti e il joystick nella loro posizione fisica. Le sigle sono quelle usate dal firmware.
 
 {{< controller-map >}}
 
