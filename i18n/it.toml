@@ -108,6 +108,8 @@ other = "Modificare un accordo"
 other = "Modalità e display"
 [hardware]
 other = "Hardware"
+[bom]
+other = "Distinta componenti"
 [firmware]
 other = "Firmware"
 [configuration]

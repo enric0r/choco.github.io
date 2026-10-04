@@ -78,7 +78,7 @@ Each key and the joystick button use 10 ms stable-edge debouncing. A newly press
 
 ## Hardware
 
-The [ChoCo hardware directory](https://github.com/enric0r/ChoCo/tree/main/hardware) contains the KiCad schematic, PCB, project file, and a `ChoCo_REV-02.zip` board archive. Check the archive contents and your board revision before ordering or assembling. The repository does not currently include a verified component BOM; use the schematic and PCB for footprints and values.
+The [ChoCo hardware directory](https://github.com/enric0r/ChoCo/tree/main/hardware) contains the KiCad schematic, PCB, project file, and a `ChoCo_REV-02.zip` board archive. Check the archive contents and your board revision before ordering or assembling. The prototype inventory below records the component types and quantities found in the project. Exact purchased models and suppliers still need confirmation from the builder.
 
 The firmware defaults in [`lib/Config/Config.h`](https://github.com/enric0r/ChoCo/blob/main/lib/Config/Config.h) are:
 
@@ -91,6 +91,34 @@ The firmware defaults in [`lib/Config/Config.h`](https://github.com/enric0r/ChoC
 | OLED SDA / SCL | GP14 / GP15 | I²C1 (`Wire1`), address `0x3C` |
 
 The display is an SSD1306-compatible 128×64 I²C OLED. Verify the voltage, pin order, and wiring of the actual module before powering it.
+
+### Prototype BOM {#bom}
+
+Quantities are for **one controller**. The electronic inventory comes from the
+KiCad schematic and PCB; keycaps and enclosure are visible in the prototype
+photos. This documents the build without guessing purchase links or exact models.
+
+| Qty | Part | Detail |
+| --- | --- | --- |
+| 1 | ChoCo PCB | Prototype marked REV-02 |
+| 1 | Raspberry Pi Pico | RP2040 module, `A1` |
+| 1 | 128×64 I²C OLED | `J1`; firmware targets SSD1306 at `0x3C`; exact module to confirm |
+| 1 | Analog joystick with push switch | PS4-style footprint; exact model to confirm |
+| 10 | Mechanical key switches | MX-style 1u footprints, `S1–S10`; brand and variant to confirm |
+| 10 | Matrix diodes | Axial DO-35 footprints, `D1–D10`; symbol mentions 1N4148, installed model to confirm |
+| 10 | Keycaps | Prototype has 3 dark, 3 brown and 4 light caps |
+| 1 assembly | Enclosure / base | Visible in the photos; material and fabrication details to confirm |
+| 1 | USB data cable | Match the connector on the installed Pico |
+
+The PCB also has four `2.2mm_M2` mounting-hole footprints. Record screw lengths,
+spacers and headers/sockets from the actual assembly; these are not additional
+schematic components. The joystick's schematic and PCB labels differ, so neither
+label is presented as a verified purchasing code.
+
+The [detailed BOM](https://github.com/enric0r/ChoCo/blob/main/hardware/BOM.md)
+contains references, footprint names, source evidence and the details still to
+add from the actual build. The firmware repository is the source for that list;
+this summary should be updated when the builder confirms a part.
 
 ## Firmware
 
