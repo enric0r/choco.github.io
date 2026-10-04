@@ -108,6 +108,8 @@ other = "Shape a chord"
 other = "Modes & display"
 [hardware]
 other = "Hardware"
+[bom]
+other = "Prototype BOM"
 [firmware]
 other = "Firmware"
 [configuration]

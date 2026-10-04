@@ -78,7 +78,7 @@ I tasti e il pulsante del joystick usano un debounce di 10 ms. Un nuovo grado pr
 
 ## Hardware {#hardware}
 
-La [cartella hardware di ChoCo](https://github.com/enric0r/ChoCo/tree/main/hardware) contiene schema KiCad, PCB, file di progetto e l’archivio della scheda `ChoCo_REV-02.zip`. Prima di ordinare o assemblare, verifica i file dell’archivio e la revisione della scheda. La repository non contiene ancora una distinta componenti verificata: controlla valori e impronte nello schema e nel PCB.
+La [cartella hardware di ChoCo](https://github.com/enric0r/ChoCo/tree/main/hardware) contiene schema KiCad, PCB, file di progetto e l’archivio della scheda `ChoCo_REV-02.zip`. Prima di ordinare o assemblare, verifica i file dell’archivio e la revisione della scheda. La distinta qui sotto riporta tipologie e quantità presenti nel progetto. I modelli effettivamente acquistati e i fornitori restano da confermare con il costruttore.
 
 Queste sono le impostazioni predefinite del firmware in [`lib/Config/Config.h`](https://github.com/enric0r/ChoCo/blob/main/lib/Config/Config.h):
 
@@ -91,6 +91,36 @@ Queste sono le impostazioni predefinite del firmware in [`lib/Config/Config.h`](
 | OLED SDA / SCL | GP14 / GP15 | I²C1 (`Wire1`), indirizzo `0x3C` |
 
 Il display è un OLED I²C 128×64 compatibile con SSD1306. Prima di alimentare il modulo, verifica tensione, ordine dei pin e collegamenti effettivi.
+
+### Distinta componenti del prototipo {#bom}
+
+Le quantità si riferiscono a **un controller**. I componenti elettronici sono
+ricavati dallo schema e dal PCB KiCad; keycap e case sono visibili nelle foto
+del prototipo. L’elenco documenta il montaggio senza inventare modelli o link
+d’acquisto.
+
+| Quantità | Componente | Dettaglio |
+| --- | --- | --- |
+| 1 | PCB ChoCo | Il prototipo riporta REV-02 |
+| 1 | Raspberry Pi Pico | Modulo RP2040, `A1` |
+| 1 | OLED I²C 128×64 | `J1`; firmware per SSD1306 a `0x3C`; modello esatto da confermare |
+| 1 | Joystick analogico con pulsante | Impronta tipo PS4; modello esatto da confermare |
+| 10 | Switch meccanici | Impronte MX da 1u, `S1–S10`; marca e variante da confermare |
+| 10 | Diodi della matrice | Impronte assiali DO-35, `D1–D10`; il simbolo cita 1N4148, modello montato da confermare |
+| 10 | Keycap | Nelle foto: 3 scuri, 3 marroni e 4 chiari |
+| 1 insieme | Case / base | Visibile nelle foto; materiale e dettagli di fabbricazione da confermare |
+| 1 | Cavo USB dati | Con connettore adatto al Pico installato |
+
+Il PCB prevede anche quattro impronte per fori di fissaggio `2.2mm_M2`. Lunghezza
+delle viti, distanziali e pin header/socket vanno annotati in base al montaggio
+reale: non sono componenti elettronici aggiuntivi dello schema. Le etichette del
+joystick nello schema e nel PCB non coincidono, quindi non le presentiamo come
+codici d’acquisto verificati.
+
+La [BOM dettagliata](https://github.com/enric0r/ChoCo/blob/main/hardware/BOM.md)
+riporta riferimenti, impronte, fonti e dettagli ancora da aggiungere sul
+montaggio effettivo. La repository del firmware contiene l’elenco di riferimento;
+questa sintesi va aggiornata quando viene confermato un componente.
 
 ## Firmware {#firmware}
 
