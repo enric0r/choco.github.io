@@ -92,6 +92,20 @@ Queste sono le impostazioni predefinite del firmware in [`lib/Config/Config.h`](
 
 Il display è un OLED I²C 128×64 compatibile con SSD1306. Prima di alimentare il modulo, verifica tensione, ordine dei pin e collegamenti effettivi.
 
+### Case stampato in 3D {#case}
+
+La [cartella del case](https://github.com/enric0r/ChoCo/tree/main/hardware/case) contiene tre modelli STL separati, ricavati dal progetto Fusion 360:
+
+| Pezzo | Download | Dimensioni in millimetri (X × Y × Z) |
+| --- | --- | --- |
+| Cornice superiore | [ChoCo-top.stl](https://raw.githubusercontent.com/enric0r/ChoCo/main/hardware/case/ChoCo-top.stl) | 148,5 × 70,5 × 7 mm |
+| Fondo a tavoletta di cioccolato | [ChoCo-bar-bottom.stl](https://raw.githubusercontent.com/enric0r/ChoCo/main/hardware/case/ChoCo-bar-bottom.stl) | 148,5 × 70,5 × 7 mm |
+| Cappuccio del joystick | [ChoCo-thumbstick.stl](https://raw.githubusercontent.com/enric0r/ChoCo/main/hardware/case/ChoCo-thumbstick.stl) | 14,5 × 14,5 × 7,5 mm |
+
+Importa ogni STL in **millimetri al 100%**, poi posizionalo sul piatto nello slicer. Il prototipo è stato stampato con una Bambu Lab P2S in PLA e/o PLA+; il PLA è il materiale indicato. Altezza dei layer, supporti e fissaggi non sono ancora documentati, quindi non è disponibile un profilo di stampa collaudato. Verifica gli incastri con la tua scheda e i tuoi switch prima di stampare tutti i pezzi.
+
+Su MakerWorld carica questi STL come **file del modello**. Per un profilo di stampa serve invece un 3MF salvato da Bambu Studio con stampante e parametri di stampa. Gli stessi STL si possono caricare su Printables. Le [note del case](https://github.com/enric0r/ChoCo/blob/main/hardware/case/README.md) includono foto e dettagli dei file.
+
 ## Firmware {#firmware}
 
 La [repository del firmware ChoCo](https://github.com/enric0r/ChoCo) usa PlatformIO con un solo ambiente `pico` e il core Arduino RP2040. Dalla radice della repository del firmware:
